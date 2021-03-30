@@ -32,7 +32,7 @@ def new_post():
     if form.validate_on_submit():
         post = Post()
         post.save_changes(form, request.files["image_path"], current_user.id, new=True)
-        app.logger.info("Successfully created a post")
+        app.logger.info("Successfully created a new post")
         return redirect(url_for("home"))
     return render_template("post.html", title="Create Post", imageSource=imageSourceUrl, form=form)
 
@@ -41,6 +41,7 @@ def new_post():
 @login_required
 def post(id):
     post = Post.query.get(int(id))
+    app.logger.info("opening post " + str(id))
     form = PostForm(formdata=request.form, obj=post)
     if form.validate_on_submit():
         post.save_changes(form, request.files["image_path"], current_user.id)
@@ -108,6 +109,7 @@ def logout():
         # Wipe out user and its token cache from session
         session.clear()
         # Also logout from your tenant's web session
+        app.logger.info("User successfully logged out")
         return redirect(Config.AUTHORITY + "/oauth2/v2.0/logout" + "?post_logout_redirect_uri=" + url_for("login", _external=True))
 
     return redirect(url_for("login"))
