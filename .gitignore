@@ -1,0 +1,4 @@
+.azure
+flask_session
+
+.env
