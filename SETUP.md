@@ -95,10 +95,9 @@ Test locally with Microsoft Account
 
     az appservice plan create -g <group> -n <plan> --is-linux --sku F1
     az webapp create -n <name> -g <group> -p <plan> -r "PYTHON|3.8"
+    while read env; do az webapp config appsettings set -g <group> -n <name> --settings $(echo $env | awk '{print $2}'); done < <(cat .env | sed /^$/d)
+    az webapp deployment source config -n <name> -g <group> -u <github-repo-url> --branch master --manual-integration
 
-Repo URL is this GitHub Repo URL
-
-    az webapp deployment source config -n <name> -g <group> -u <repo-url> --branch main --manual-integration
 
 TODO: update `getAToken` and `login` AD-URLs 
 
