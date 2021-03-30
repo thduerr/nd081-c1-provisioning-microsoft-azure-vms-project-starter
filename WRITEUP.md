@@ -17,9 +17,12 @@ I've chosen App Services and decided against a VM, because
 
 * The app requires technologies which are not available in Azure as a service.
 * The runtime stack is not supported by App Services.
-* The application requires multiple machines, e.g. for big-data processing
+* The application requires multiple machines, e.g. for big-data processing.
+* The app deployment requires more control and debugging capabilities.
 
 ### Online Webapp
+
+The forked GitHub repository is: `https://github.com/thduerr/nd081-c1-provisioning-microsoft-azure-vms-project-starter`
 
 My webapp is available online for one day using this link: `http://thduerr-cms.azurewebsites.net/`
 
