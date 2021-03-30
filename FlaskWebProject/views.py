@@ -52,7 +52,9 @@ def post(id):
 @login_required
 def delete(id):
     post = Post.query.get(int(id))
-    post.delete_post()
+    post.delete_post(id)
+    flash("post " + str(id) + " was successfully deleted")
+    app.logger.info("post " + str(id) + " was successfully deleted")
     return redirect(url_for("home"))
 
 
