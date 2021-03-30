@@ -5,7 +5,6 @@
     python -m venv venv
     source venv/bin/activate
     pip install -r requirements.txt
-    pip install python-dotenv
     pip install --upgrade setuptools
     pip install --upgrade pip
     pip install --upgrade distlib
@@ -98,8 +97,12 @@ Test locally with Microsoft Account
     while read env; do az webapp config appsettings set -g <group> -n <name> --settings $(echo $env | awk '{print $2}'); done < <(cat .env | sed /^$/d)
     az webapp deployment source config -n <name> -g <group> -u <github-repo-url> --branch master --manual-integration
 
+Add Redirect URI for registered app `<app-name>` in Azure Active Directory: `https://<name>.azurewebsites.net/getAToken`
 
-TODO: update `getAToken` and `login` AD-URLs 
+Test with Microsoft Account
+
+    open http://<name>.azurewebsites.net/home
+
 
 # Q & A
 
