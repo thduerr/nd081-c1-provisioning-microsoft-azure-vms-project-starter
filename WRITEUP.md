@@ -2,10 +2,10 @@
 
 ### Analyze, choose, and justify the appropriate resource option for deploying the app.
 
-The application is a simple web application which does not need much resources.
 
 I've chosen App Services and decided against a VM, because
 
+* the application is a simple web application which does not need much resources.
 * using App Services, there is no need to manage the underlying infrastructure. VM's require much more configuration efforts and are less easier to manage.
 * the deloyment is very simple and fast.
 * the required runtime stack (Python) is available out-of-the-box.
