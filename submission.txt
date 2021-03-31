@@ -5,6 +5,5 @@ SETUP.md
 WRITEUP.md
 application.py
 config.py
-manifest.json
 requirements.txt
 
