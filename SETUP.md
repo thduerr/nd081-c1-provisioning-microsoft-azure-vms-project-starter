@@ -67,6 +67,20 @@ In case of Chrome browser SSL warning, enter `thisisunsafe`
 
 ## Azure Active Directory
 
+Create a `@manifest.json` file:
+
+    [{
+        "resourceAppId": "00000003-0000-0000-c000-000000000000",
+        "resourceAccess": [
+            {
+                "id": "e1fe6dd8-ba31-4d61-89e7-88639da4683d",
+                "type": "Scope"
+            }
+      ]
+    }]
+
+then run these commands
+
     az ad app create --display-name <app-name>
                      --reply-urls https://localhost:5555/getAToken
                      --required-resource-accesses manifest.json
