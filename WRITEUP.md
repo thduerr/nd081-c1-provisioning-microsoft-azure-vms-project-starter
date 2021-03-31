@@ -2,27 +2,26 @@
 
 ### Analyze, choose, and justify the appropriate resource option for deploying the app.
 
+I've chosen App Services and decided against a Virtual Machine, because
 
-I've chosen App Services and decided against a VM, because
-
-* the application is a simple web application which does not need much resources.
+* the application is a simple web application whichi for now does not need much resources.
 * using App Services, there is no need to manage the underlying infrastructure. VM's require much more configuration efforts and are less easier to manage.
-* the deloyment is very simple and fast.
+* the deloyment is very simple and fast. Integration with GitHub is very easy.
 * the required runtime stack (Python) is available out-of-the-box.
-* App Servies has autoscaling and load-balancing built-in.
-* App Services has more availability zones.
-* a rough cost comparison shows that it is cheaper
+* App Services have autoscaling and load-balancing built-in.
+* App Services have many availability zones out-of-the-box.
+* a rough cost comparison shows that it is cheaper (but I'm not super sure).
 
 ### Assess app changes that would change your decision.
 
-* The app requires technologies which are not available in Azure as a service.
+* The app requires technologies and software which are not available in Azure as a service.
 * The runtime stack is not supported by App Services.
 * The application requires multiple machines, e.g. for big-data processing.
 * The app deployment requires more control and debugging capabilities.
 
-### Online Webapp
+### Sourcecode
 
-The forked GitHub repository is: `https://github.com/thduerr/nd081-c1-provisioning-microsoft-azure-vms-project-starter`
+My forked public GitHub repository is this: `https://github.com/thduerr/nd081-c1-provisioning-microsoft-azure-vms-project-starter`
 
-My webapp is available online for one day using this link: `http://thduerr-cms.azurewebsites.net/`
+My webapp is available online for some days using this link: `http://thduerr-cms.azurewebsites.net/`
 
