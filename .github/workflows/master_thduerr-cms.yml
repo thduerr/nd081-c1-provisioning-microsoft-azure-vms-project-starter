@@ -32,4 +32,4 @@ jobs:
       with:
         app-name: 'thduerr-cms'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6058015be7ac478796623022635a5a81 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_f0066e600a334b06bb1d1dd54c4081a2 }}
