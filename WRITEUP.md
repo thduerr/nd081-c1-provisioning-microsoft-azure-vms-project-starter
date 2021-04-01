@@ -6,8 +6,8 @@ Analyze, choose, and justify the appropriate resource option for deploying the a
 What do I have?
 
 * a simple Flask web-application (CMS) to be run in a Python runtime environment
-* a relational database for user- and content-data ( --> is already runing as Azure SQL database)
-* a file storage for content assets and logfiles ( --> is already runing as Azure Blob storage)
+* a relational database for user- and content-data ( --> is already running as Azure SQL database)
+* a file storage for content assets and logfiles ( --> is already running as Azure Blob storage)
 * an external identity provider ( --> is already available as Azure Active Directory)
 
 Problem:
@@ -36,12 +36,12 @@ PRO:
 * deployment slots
 * monitoring and diagnostics out-of-the-box 
 * load balancing is integrated
-* autoscaling is build-in
-* high availability as serives managed and monitored
+* auto-scaling is build-in
+* high availability as services managed and monitored
 
 CONTRA:
 * limited configuration and optimization options
-* limited possiblities for debugging and finding root-causes if somethings does not work as expected
+* limited possibilities for debugging and finding root-causes if something does not work as expected
 * only pre-defined workflows
 * only pre-defined runtime stacks
 
@@ -64,7 +64,7 @@ CONTRA:
 * no web server out-of-the-box
 * manual setup of a deployment workflow
 * requires knowledge of server management and OS systems
-* autoscaling is not build-in
+* auto-scaling is not build-in
 * load balancing is not build-in
 
 
@@ -77,7 +77,7 @@ Regarding server performance, let's have the following assumptions:
 * medium-sized database
 * mid volume server traffic
 
-As databse and storage costs are the same for both options, I only compare prices for VM vs. App-Service
+As database and storage costs are the same for both options, I only compare prices for VM vs. App-Service
 
 
   Component        | Azure App Service          | Azure Virtual Machine
@@ -93,16 +93,16 @@ As databse and storage costs are the same for both options, I only compare price
 
 # CONCLUSION
 
-With the current state of the webapp, I definitely start with the fully managed Azure App Services, and 
+With the current state of the web-app, I definitely start with the fully managed Azure App Services, and 
 switch to VM as soon as I push the limits.
 
-From a cost perspective, using App Services allows to develop an applicaiton without starting costs using the F1 Free
+From a cost perspective, using App Services allows to develop an application without starting costs using the F1 Free
 tier. Also there are no operational costs and no costs for setting up an infrastructure.
 
 App Services allow to have an agile approach: start early and get fast results without the need to have done the
 right decisions upfront.
 
-App Services have build-in all aspects which are important when going to production: autoscaling, availability and security.
+App Services have build-in all aspects which are important when going to production: scaling, availability and security.
 
 
 
@@ -116,7 +116,7 @@ I would switch to using Azure Virtual Machine, if
 * the application is a legacy application and requires technologies and software which are not available 
   in the App Service runtime stack.
 * the application is more complex and consists of different services and processes which have different requirements on
-  computation, storage and traffic. Maybe I would switch to Microservices then, instad of VMs.
+  computation, storage and traffic. Maybe I would switch to microservices then, instead of VMs.
 * the application has technical problems which can't be solved without having full access and full control of
   the infrastructure.
 * if the costs of App Services grow faster compared to VMs in case of increasing traffic, storage and
